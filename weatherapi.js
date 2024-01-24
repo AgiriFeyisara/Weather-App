@@ -1,4 +1,10 @@
-const apiKey = "dc34a0ed449d435d5eae78b4050b95d4";
+document.write('<script src ="./key.js"></script>');
+
+function makeApiRequest() {
+  console.log(apiKey);
+}
+
+makeApiRequest();
 
 const inputContainer = document.getElementById("inputContainer");
 const cityInput = document.getElementById("cityInput");
