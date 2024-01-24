@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Weather</title>
+  </head>
+  <body>
+    <section>
+      <div class="weather-app">
+        <header>
+          <div class="image-container">
+            <div class="left">
+              <img src="./image/bar.svg" alt="" class="img-1" />
+              <img src="./image/bell.svg" alt="" class="img-1" />
+              <img src="./image/location.svg" alt="" class="img-1" />
+              <p class="p1">Dhaka,Bangladesh</p>
+            </div>
+            <div class="search-bar">
+              <form id="inputContainer">
+                <input
+                  type="text"
+                  id="cityInput"
+                  placeholder="Search City. . . ."
+                />
+                <button onclick="getWeather()" type="submit" id="btn1">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div id="weatherInfo">
+                <!-- weather info will be displayed here -->
+              </div>
+            </div>
+            <div class="lady-btn">
+              <div id="toggle">
+                <i class="indicator"></i>
+              </div>
+              <img src="./image/lady-img.svg" />
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="container-2">
+            <div class="day">
+              <p class="p2">Today</p>
+              <p class="p2">Tomorrow</p>
+              <p>Next 7days</p>
+            </div>
+            <div class="rain-forecast">
+              <div class="forecast">
+                <p class="fore">Forecast</p>
+                <p class="air">Air Quality</p>
+              </div>
+              <p class="p3">Chance of rain</p>
+            </div>
+          </div>
+          <div class="container-3">
+            <div class="container-3-1">
+              <div class="friday">
+                <p>Friday</p>
+                <p></p>
+                <p>11:45 AM</p>
+              </div>
+              <div class="temperature">
+                <div>
+                  <p class="p4">160</p>
+                  <p class>Real Feel <span>180</span></p>
+                  <p>Wind N-E.<span> 6-7km/h </span></p>
+                  <p>Pressure <span> 100MB </span></p>
+                  <p>Humidity <span>51% </span></p>
+                </div>
+                <div>
+                  <img src="./image/Sunny.svg" class="img" />
+                  <p>Sunrise <span>5:30AM </span></p>
+                  <p>Sunset <span>6:45 </span></p>
+                </div>
+              </div>
+            </div>
+            <div class="container-4">
+              <p>SAT</p>
+              <img src="./image/Line 1.svg" alt="" />
+              <img src="./image/Rainy-Sun.svg" alt="" />
+              <p>10</p>
+            </div>
+            <div class="container-4">
+              <p>SUN</p>
+              <img src="./image/Line 1.svg" alt="" />
+
+              <img src="./image/Sunny 2.svg" alt="" />
+              <p>15</p>
+            </div>
+            <div class="container-4">
+              <p>MON</p>
+              <img src="./image/Line 1.svg" alt="" />
+              <img src="./image/Sunny3.svg" alt="" />
+              <p>11</p>
+            </div>
+            <div class="container-4">
+              <p>TUE</p>
+              <img src="./image/Line 1.svg" alt="" />
+              <img src="./image/sunny4.svg" alt="" />
+              <p>10</p>
+            </div>
+            <div class="container-4">
+              <p>WED</p>
+              <img src="./image/Line 1.svg" alt="" />
+              <img src="./image/sunny5.svg" alt="" />
+              <p>12</p>
+            </div>
+            <div class="container-4">
+              <p>THU</p>
+              <img src="./image/Line 1.svg" alt="" />
+              <img src="./image/Windy.svg" alt="" />
+              <p>100</p>
+            </div>
+
+            <img src="./image/rain-graph.svg" alt="" />
+          </div>
+          <div class="container-5">
+            <p>Today's Overview</p>
+            <div class="p5">
+              <p>Other Cities</p>
+              <p class="p6">See All</p>
+            </div>
+          </div>
+          <div class="container-7">
+            <div class="box-wrapper">
+              <div>
+                <div class="box">
+                  <p class="p8">Wind Status</p>
+                  <img src="./image/Wind Satus.svg" class="img-" />
+                  <div class="p7">
+                    <p>7.50 km/h</p>
+                    <p>6.20 AM</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="p8">Humidity</p>
+                  <img src="./image/carbon_humidity.svg" class="img-5" />
+                  <div class="p7">
+                    <p>84%</p>
+                    <p class="span2">The dew point is 270 right now</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="box">
+                  <p class="p8">UV Indesx</p>
+                  <img src="./image/Circle.svg" class="img-5" />
+                  <p class="uv">5.50 UV</p>
+                </div>
+                <div class="box">
+                  <p class="p8">Visibility</p>
+                  <img src="./image/Visibility Icon.svg" class="img-5" />
+                  <div class="p7">
+                    <p>04 km</p>
+                    <p class="span2">Haze is affecting visibility</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- image -->
+            <div class="image-bg">
+              <div class="image-bg-text">
+                <p>
+                  Explore global map of wind <br />
+                  weather and ocean condition
+                </p>
+              </div>
+              <button class="btn">GET STARTED</button>
+            </div>
+            <!-- windy -->
+            <div class="windy">
+              <div class="wind-1">
+                <div class="wind-1a">
+                  <p>China</p>
+                  <p class="city">Beijing</p>
+                  <p>Cloudy</p>
+                </div>
+                <img src="./image/sunny4.svg" alt="" />
+              </div>
+              <div class="wind-1">
+                <div class="wind-1a">
+                  <p>US</p>
+                  <p class="city">California</p>
+                  <p>Windly</p>
+                </div>
+                <img src="./image/Windy.svg" alt="" />
+              </div>
+              <div class="wind-1">
+                <div class="wind-1a">
+                  <p>Dubai</p>
+                  <p class="city">Arab Emirate</p>
+                  <p>Mostly Sunny</p>
+                </div>
+                <img src="./image/Sunny3.svg" alt="" />
+              </div>
+              <div class="wind-1">
+                <div class="wind-1a">
+                  <p>Canada</p>
+                  <p class="city">Charlottetown</p>
+                  <p>Light SnowShower</p>
+                </div>
+                <img src="./image/Rainy-Sun.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <script src="weatherapi.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
